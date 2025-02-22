@@ -1,7 +1,11 @@
 `timescale 1 ns / 1 ps
 module Top_rx(
 	input sck,			//61.440MHz
-	
+    input uart_rx,
+	output uart_tx,
+
+    input btn1,
+
 	// ADC interface		
 	input [11:0] adc_data,
 	input adc_overrange,
@@ -19,9 +23,6 @@ module Top_rx(
     output reg Reconfig = 1'b1,
     input Reset_Button,
 
-     //I2C
-    input i2c_scl,
-    inout i2c_sda,
     output test
 	);
 
@@ -48,52 +49,36 @@ module Top_rx(
 
 ////////////////get_frequency//////////////////////////
 
-    reg [7:0] byte_count;
-    reg [0:0] byte_begin;
-    wire [7:0] i2c_data;
-    wire i2c_strobe;
-    reg [7:0] i2c_data_1,i2c_data_2,i2c_data_3,i2c_data_4;
-
-    always @(posedge i2c_strobe)
-        begin
-            if ((i2c_data == 8'haa) && !byte_begin) 
-                begin 
-                    byte_begin = 1;byte_count = 0;
-                end
-
-            if(byte_begin)
-                begin
-                  if(byte_count == 2) begin i2c_data_4 = i2c_data;end
-                  if(byte_count == 5) begin i2c_data_3 = i2c_data;end
-                  if(byte_count == 7) begin i2c_data_2 = i2c_data;end
-                  if(byte_count == 9) 
-                       begin 
-                        i2c_data_1 = i2c_data;byte_begin = 0;
-                       end
-                  
-                    byte_count = byte_count+1'b1;
-                end
-         end
-    //I2C module
+    wire [31:0] frequency_rx;
+    wire [31:0] frequency_out;
+    reg [31:0] frequency_reg = 32'd7050000;
+    reg [0:5] led_reg;
+    wire uart_ready;
 
 
-    i2c_slave i2c(
-        .clk(BCK),
-        .reset(1'b0),
-        .addr(7'h33),
-        .data_wrt(i2c_data),
-        .wrt_tick(i2c_strobe),
-        .data_rd(),
-        .data_req(),
-        .rd_tick(),
-        .scl(i2c_scl),
-        .sda(i2c_sda)
+    assign frequency_rx = frequency_reg;
+
+    uart uart_top(
+        .clk(sck),
+        .uart_rx(uart_rx),
+        .uart_tx(uart_tx),
+        .led(led),
+        .frequency_rx(frequency_rx),
+        .frequency_out(frequency_out),
+        .byteReady(uart_ready),
+        .btn1(btn1)
     );
 
-wire [31:0] frequency_rx = {i2c_data_4,i2c_data_3,i2c_data_2,i2c_data_1};
+    always @(posedge sck) begin
+        if (uart_ready) begin
+            frequency_reg <= frequency_out;
+        end 
+    end
+
 
 /////////////////////////////////////////////////////////////
-assign led = ~frequency_rx[5:0];
+
+    assign led = led_reg;
 
 /////////////////Recieve///////////////////////////////////////
     reciever rx(sck, frequency_rx, temp_ADC,rx_real,rx_imag);

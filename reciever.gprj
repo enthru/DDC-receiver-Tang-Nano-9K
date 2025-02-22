@@ -16,6 +16,7 @@
         <File path="src/i2s.v" type="file.verilog" enable="1"/>
         <File path="src/reciever.v" type="file.verilog" enable="1"/>
         <File path="src/top_rx.v" type="file.verilog" enable="1"/>
+        <File path="src/uart.v" type="file.verilog" enable="1"/>
         <File path="src/varcic.v" type="file.verilog" enable="1"/>
         <File path="src/reciever.cst" type="file.cst" enable="1"/>
         <File path="src/reciever.sdc" type="file.sdc" enable="1"/>

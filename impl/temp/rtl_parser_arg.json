@@ -1,51 +1,56 @@
 {
+ "Device" : "GW1NR-9C",
  "Files" : [
   {
-   "Path" : "/home/tvl/Gowin/Projects/reciever/src/cic.v",
+   "Path" : "C:/Users/enthru/Desktop/DDC-receiver-Tang-Nano-9K/src/cic.v",
    "Type" : "verilog"
   },
   {
-   "Path" : "/home/tvl/Gowin/Projects/reciever/src/clip_led.v",
+   "Path" : "C:/Users/enthru/Desktop/DDC-receiver-Tang-Nano-9K/src/clip_led.v",
    "Type" : "verilog"
   },
   {
-   "Path" : "/home/tvl/Gowin/Projects/reciever/src/cordic_rx.v",
+   "Path" : "C:/Users/enthru/Desktop/DDC-receiver-Tang-Nano-9K/src/cordic_rx.v",
    "Type" : "verilog"
   },
   {
-   "Path" : "/home/tvl/Gowin/Projects/reciever/src/firx8x8.v",
+   "Path" : "C:/Users/enthru/Desktop/DDC-receiver-Tang-Nano-9K/src/firx8x8.v",
    "Type" : "verilog"
   },
   {
-   "Path" : "/home/tvl/Gowin/Projects/reciever/src/gowin_clkdiv/gowin_clkdiv5.v",
+   "Path" : "C:/Users/enthru/Desktop/DDC-receiver-Tang-Nano-9K/src/gowin_clkdiv/gowin_clkdiv5.v",
    "Type" : "verilog"
   },
   {
-   "Path" : "/home/tvl/Gowin/Projects/reciever/src/gowin_clkdiv_4/gowin_clkdiv_4.v",
+   "Path" : "C:/Users/enthru/Desktop/DDC-receiver-Tang-Nano-9K/src/gowin_clkdiv_4/gowin_clkdiv_4.v",
    "Type" : "verilog"
   },
   {
-   "Path" : "/home/tvl/Gowin/Projects/reciever/src/gowin_prom/gowin_prom_2048.v",
+   "Path" : "C:/Users/enthru/Desktop/DDC-receiver-Tang-Nano-9K/src/gowin_prom/gowin_prom_2048.v",
    "Type" : "verilog"
   },
   {
-   "Path" : "/home/tvl/Gowin/Projects/reciever/src/i2c_control.v",
+   "Path" : "C:/Users/enthru/Desktop/DDC-receiver-Tang-Nano-9K/src/i2c_control.v",
    "Type" : "verilog"
   },
   {
-   "Path" : "/home/tvl/Gowin/Projects/reciever/src/i2s.v",
+   "Path" : "C:/Users/enthru/Desktop/DDC-receiver-Tang-Nano-9K/src/i2s.v",
    "Type" : "verilog"
   },
   {
-   "Path" : "/home/tvl/Gowin/Projects/reciever/src/reciever.v",
+   "Path" : "C:/Users/enthru/Desktop/DDC-receiver-Tang-Nano-9K/src/reciever.v",
    "Type" : "verilog"
   },
   {
-   "Path" : "/home/tvl/Gowin/Projects/reciever/src/top_rx.v",
+   "Path" : "C:/Users/enthru/Desktop/DDC-receiver-Tang-Nano-9K/src/top_rx.v",
    "Type" : "verilog"
   },
   {
-   "Path" : "/home/tvl/Gowin/Projects/reciever/src/varcic.v",
+   "Path" : "C:/Users/enthru/Desktop/DDC-receiver-Tang-Nano-9K/src/uart.v",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "C:/Users/enthru/Desktop/DDC-receiver-Tang-Nano-9K/src/varcic.v",
    "Type" : "verilog"
   }
  ],
@@ -53,7 +58,7 @@
 
  ],
  "LoopLimit" : 2000,
- "ResultFile" : "/home/tvl/Gowin/Projects/reciever/impl/temp/rtl_parser.result",
+ "ResultFile" : "C:/Users/enthru/Desktop/DDC-receiver-Tang-Nano-9K/impl/temp/rtl_parser.result",
  "Top" : "Top_rx",
  "VerilogStd" : "verilog_2001",
  "VhdlStd" : "vhdl_93"

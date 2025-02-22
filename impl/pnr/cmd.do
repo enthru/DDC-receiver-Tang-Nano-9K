@@ -1,9 +1,9 @@
--d /home/tvl/Gowin/Projects/reciever/impl/gwsynthesis/reciever.vg
+-d C:\Users\enthru\Desktop\DDC-receiver-Tang-Nano-9K\impl\gwsynthesis\reciever.vg
 -p GW1NR-9C-QFN88P-6
 -pn GW1NR-LV9QN88PC6/I5
--cst /home/tvl/Gowin/Projects/reciever/src/reciever.cst
--cfg /home/tvl/Gowin/Projects/reciever/impl/pnr/device.cfg
--sdc /home/tvl/Gowin/Projects/reciever/src/reciever.sdc
+-cst C:\Users\enthru\Desktop\DDC-receiver-Tang-Nano-9K\src\reciever.cst
+-cfg C:\Users\enthru\Desktop\DDC-receiver-Tang-Nano-9K\impl\pnr\device.cfg
+-sdc C:\Users\enthru\Desktop\DDC-receiver-Tang-Nano-9K\src\reciever.sdc
 -bit
 -tr
 -ph
@@ -11,4 +11,6 @@
 -cst_error
 -place_option 1
 -route_option 1
+-correct_hold 1
 -route_maxfan 23
+-global_freq 50.000

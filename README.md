@@ -1,3 +1,9 @@
+
+Changes in this fork:
+
+- Change frequency via serial command - just connect to the standart gowin uart and type frequency in the terminal (no checks!).
+- Press second button (not reset :)) to show current frequency in the uart terminal.
+
 Test fpga Gowin on module tang-nano-9k as ddc-frontend for sdr eceiver
 
 Structure:

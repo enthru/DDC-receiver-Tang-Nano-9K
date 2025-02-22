@@ -1,87 +1,84 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Module name="Top_rx" Register="86" Lut="95">
- <SubModule name="div5"/>
- <SubModule name="div4"/>
- <SubModule name="i2c" Register="28" Lut="66">
-  <SubModule name="sda_edge_detector" Register="4"/>
-  <SubModule name="scl_edge_detector" Register="4"/>
- </SubModule>
- <SubModule name="rx" Register="48" Lut="53" Dsp="1">
-  <SubModule name="rx_cordic" Register="677" Alu="1114" Lut="1022"/>
-  <SubModule name="cic_inst_I1" Register="17" Alu="15" Lut="32">
-   <SubModule name="cic_stages[0].cic_integrator_inst" Register="27" Alu="27"/>
-   <SubModule name="cic_stages[0].cic_comb_inst" Register="54" Alu="27"/>
-   <SubModule name="cic_stages[1].cic_integrator_inst" Register="27" Alu="27"/>
-   <SubModule name="cic_stages[1].cic_comb_inst" Register="54" Alu="27"/>
-   <SubModule name="cic_stages[2].cic_integrator_inst" Register="27" Alu="27"/>
-   <SubModule name="cic_stages[2].cic_comb_inst" Register="46" Alu="27"/>
-  </SubModule>
-  <SubModule name="cic_inst_Q1" Register="17" Alu="15" Lut="33">
-   <SubModule name="cic_stages[0].cic_integrator_inst" Register="27" Alu="27"/>
-   <SubModule name="cic_stages[0].cic_comb_inst" Register="54" Alu="27"/>
-   <SubModule name="cic_stages[1].cic_integrator_inst" Register="27" Alu="27"/>
-   <SubModule name="cic_stages[1].cic_comb_inst" Register="54" Alu="27"/>
-   <SubModule name="cic_stages[2].cic_integrator_inst" Register="27" Alu="27"/>
-   <SubModule name="cic_stages[2].cic_comb_inst" Register="46" Alu="27"/>
-  </SubModule>
-  <SubModule name="varcic_inst_I2" Register="35" Alu="33" Lut="8">
-   <SubModule name="cic_stages[0].cic_integrator_inst" Register="35" Alu="35"/>
-   <SubModule name="cic_stages[0].cic_comb_inst" Register="70" Alu="35"/>
-   <SubModule name="cic_stages[1].cic_integrator_inst" Register="35" Alu="35"/>
-   <SubModule name="cic_stages[1].cic_comb_inst" Register="70" Alu="35"/>
-   <SubModule name="cic_stages[2].cic_integrator_inst" Register="35" Alu="35"/>
-   <SubModule name="cic_stages[2].cic_comb_inst" Register="70" Alu="35"/>
-   <SubModule name="cic_stages[3].cic_integrator_inst" Register="35" Alu="35"/>
-   <SubModule name="cic_stages[3].cic_comb_inst" Register="70" Alu="35"/>
-   <SubModule name="cic_stages[4].cic_integrator_inst" Register="35" Alu="35"/>
-   <SubModule name="cic_stages[4].cic_comb_inst" Register="54" Alu="35"/>
-  </SubModule>
-  <SubModule name="varcic_inst_Q2" Register="35" Alu="33" Lut="7">
-   <SubModule name="cic_stages[0].cic_integrator_inst" Register="35" Alu="35"/>
-   <SubModule name="cic_stages[0].cic_comb_inst" Register="70" Alu="35"/>
-   <SubModule name="cic_stages[1].cic_integrator_inst" Register="35" Alu="35"/>
-   <SubModule name="cic_stages[1].cic_comb_inst" Register="70" Alu="35"/>
-   <SubModule name="cic_stages[2].cic_integrator_inst" Register="35" Alu="35"/>
-   <SubModule name="cic_stages[2].cic_comb_inst" Register="70" Alu="35"/>
-   <SubModule name="cic_stages[3].cic_integrator_inst" Register="35" Alu="35"/>
-   <SubModule name="cic_stages[3].cic_comb_inst" Register="70" Alu="35"/>
-   <SubModule name="cic_stages[4].cic_integrator_inst" Register="35" Alu="35"/>
-   <SubModule name="cic_stages[4].cic_comb_inst" Register="54" Alu="35"/>
-  </SubModule>
-  <SubModule name="fir" Register="61" Alu="342" Lut="273">
-   <SubModule name="A" Register="90" Alu="63" Lut="22" Dsp="2">
-    <SubModule name="fir2048" Bsram="2"/>
-    <SubModule name="ram36" Lut="1" Bsram="1"/>
-   </SubModule>
-   <SubModule name="B" Register="90" Alu="63" Lut="22" Dsp="2">
-    <SubModule name="fir2048" Bsram="2"/>
-    <SubModule name="ram36" Lut="1" Bsram="1"/>
-   </SubModule>
-   <SubModule name="C" Register="90" Alu="63" Lut="22" Dsp="2">
-    <SubModule name="fir2048" Bsram="2"/>
-    <SubModule name="ram36" Lut="1" Bsram="1"/>
-   </SubModule>
-   <SubModule name="D" Register="90" Alu="63" Lut="22" Dsp="2">
-    <SubModule name="fir2048" Bsram="2"/>
-    <SubModule name="ram36" Lut="1" Bsram="1"/>
-   </SubModule>
-   <SubModule name="E" Register="90" Alu="63" Lut="22" Dsp="2">
-    <SubModule name="fir2048" Bsram="2"/>
-    <SubModule name="ram36" Lut="1" Bsram="1"/>
-   </SubModule>
-   <SubModule name="F" Register="90" Alu="63" Lut="22" Dsp="2">
-    <SubModule name="fir2048" Bsram="2"/>
-    <SubModule name="ram36" Lut="1" Bsram="1"/>
-   </SubModule>
-   <SubModule name="G" Register="90" Alu="63" Lut="22" Dsp="2">
-    <SubModule name="fir2048" Bsram="2"/>
-    <SubModule name="ram36" Lut="1" Bsram="1"/>
-   </SubModule>
-   <SubModule name="H" Register="90" Alu="63" Lut="22" Dsp="2">
-    <SubModule name="fir2048" Bsram="2"/>
-    <SubModule name="ram36" Lut="1" Bsram="1"/>
-   </SubModule>
-  </SubModule>
- </SubModule>
- <SubModule name="i2s" Register="56" Lut="62"/>
+<Module name="Top_rx" Register="77" Lut="57" T_Register="3368(77)" T_Alu="3143(0)" T_Lut="2349(57)" T_MULT18X18="16(0)" T_MULT36X36="1(0)" T_Bsram="24(0)">
+    <SubModule name="div5"/>
+    <SubModule name="div4"/>
+    <SubModule name="uart_top" Register="137" Alu="60" Lut="1094" T_Register="137(137)" T_Alu="60(60)" T_Lut="1094(1094)"/>
+    <SubModule name="rx" Register="48" Lut="43" MULT36X36="1" T_Register="3098(48)" T_Alu="3083(0)" T_Lut="1135(43)" T_MULT18X18="16(0)" T_MULT36X36="1(1)" T_Bsram="24(0)">
+        <SubModule name="rx_cordic" Register="677" Alu="1116" Lut="563" T_Register="677(677)" T_Alu="1116(1116)" T_Lut="563(563)"/>
+        <SubModule name="cic_inst_I1" Register="17" Alu="15" Lut="30" T_Register="252(17)" T_Alu="177(15)" T_Lut="30(30)">
+            <SubModule name="cic_stages[0].cic_integrator_inst" Register="27" Alu="27" T_Register="27(27)" T_Alu="27(27)"/>
+            <SubModule name="cic_stages[0].cic_comb_inst" Register="54" Alu="27" T_Register="54(54)" T_Alu="27(27)"/>
+            <SubModule name="cic_stages[1].cic_integrator_inst" Register="27" Alu="27" T_Register="27(27)" T_Alu="27(27)"/>
+            <SubModule name="cic_stages[1].cic_comb_inst" Register="54" Alu="27" T_Register="54(54)" T_Alu="27(27)"/>
+            <SubModule name="cic_stages[2].cic_integrator_inst" Register="27" Alu="27" T_Register="27(27)" T_Alu="27(27)"/>
+            <SubModule name="cic_stages[2].cic_comb_inst" Register="46" Alu="27" T_Register="46(46)" T_Alu="27(27)"/>
+        </SubModule>
+        <SubModule name="cic_inst_Q1" Register="17" Alu="15" Lut="30" T_Register="252(17)" T_Alu="177(15)" T_Lut="30(30)">
+            <SubModule name="cic_stages[0].cic_integrator_inst" Register="27" Alu="27" T_Register="27(27)" T_Alu="27(27)"/>
+            <SubModule name="cic_stages[0].cic_comb_inst" Register="54" Alu="27" T_Register="54(54)" T_Alu="27(27)"/>
+            <SubModule name="cic_stages[1].cic_integrator_inst" Register="27" Alu="27" T_Register="27(27)" T_Alu="27(27)"/>
+            <SubModule name="cic_stages[1].cic_comb_inst" Register="54" Alu="27" T_Register="54(54)" T_Alu="27(27)"/>
+            <SubModule name="cic_stages[2].cic_integrator_inst" Register="27" Alu="27" T_Register="27(27)" T_Alu="27(27)"/>
+            <SubModule name="cic_stages[2].cic_comb_inst" Register="46" Alu="27" T_Register="46(46)" T_Alu="27(27)"/>
+        </SubModule>
+        <SubModule name="varcic_inst_I2" Register="35" Alu="33" Lut="8" T_Register="544(35)" T_Alu="383(33)" T_Lut="8(8)">
+            <SubModule name="cic_stages[0].cic_integrator_inst" Register="35" Alu="35" T_Register="35(35)" T_Alu="35(35)"/>
+            <SubModule name="cic_stages[0].cic_comb_inst" Register="70" Alu="35" T_Register="70(70)" T_Alu="35(35)"/>
+            <SubModule name="cic_stages[1].cic_integrator_inst" Register="35" Alu="35" T_Register="35(35)" T_Alu="35(35)"/>
+            <SubModule name="cic_stages[1].cic_comb_inst" Register="70" Alu="35" T_Register="70(70)" T_Alu="35(35)"/>
+            <SubModule name="cic_stages[2].cic_integrator_inst" Register="35" Alu="35" T_Register="35(35)" T_Alu="35(35)"/>
+            <SubModule name="cic_stages[2].cic_comb_inst" Register="70" Alu="35" T_Register="70(70)" T_Alu="35(35)"/>
+            <SubModule name="cic_stages[3].cic_integrator_inst" Register="35" Alu="35" T_Register="35(35)" T_Alu="35(35)"/>
+            <SubModule name="cic_stages[3].cic_comb_inst" Register="70" Alu="35" T_Register="70(70)" T_Alu="35(35)"/>
+            <SubModule name="cic_stages[4].cic_integrator_inst" Register="35" Alu="35" T_Register="35(35)" T_Alu="35(35)"/>
+            <SubModule name="cic_stages[4].cic_comb_inst" Register="54" Alu="35" T_Register="54(54)" T_Alu="35(35)"/>
+        </SubModule>
+        <SubModule name="varcic_inst_Q2" Register="35" Alu="33" Lut="7" T_Register="544(35)" T_Alu="383(33)" T_Lut="7(7)">
+            <SubModule name="cic_stages[0].cic_integrator_inst" Register="35" Alu="35" T_Register="35(35)" T_Alu="35(35)"/>
+            <SubModule name="cic_stages[0].cic_comb_inst" Register="70" Alu="35" T_Register="70(70)" T_Alu="35(35)"/>
+            <SubModule name="cic_stages[1].cic_integrator_inst" Register="35" Alu="35" T_Register="35(35)" T_Alu="35(35)"/>
+            <SubModule name="cic_stages[1].cic_comb_inst" Register="70" Alu="35" T_Register="70(70)" T_Alu="35(35)"/>
+            <SubModule name="cic_stages[2].cic_integrator_inst" Register="35" Alu="35" T_Register="35(35)" T_Alu="35(35)"/>
+            <SubModule name="cic_stages[2].cic_comb_inst" Register="70" Alu="35" T_Register="70(70)" T_Alu="35(35)"/>
+            <SubModule name="cic_stages[3].cic_integrator_inst" Register="35" Alu="35" T_Register="35(35)" T_Alu="35(35)"/>
+            <SubModule name="cic_stages[3].cic_comb_inst" Register="70" Alu="35" T_Register="70(70)" T_Alu="35(35)"/>
+            <SubModule name="cic_stages[4].cic_integrator_inst" Register="35" Alu="35" T_Register="35(35)" T_Alu="35(35)"/>
+            <SubModule name="cic_stages[4].cic_comb_inst" Register="54" Alu="35" T_Register="54(54)" T_Alu="35(35)"/>
+        </SubModule>
+        <SubModule name="fir" Register="61" Alu="343" Lut="270" T_Register="781(61)" T_Alu="847(343)" T_Lut="454(270)" T_MULT18X18="16(0)" T_Bsram="24(0)">
+            <SubModule name="A" Register="90" Alu="63" Lut="22" MULT18X18="2" T_Register="90(90)" T_Alu="63(63)" T_Lut="23(22)" T_MULT18X18="2(2)" T_Bsram="3(0)">
+                <SubModule name="fir2048" Bsram="2" T_Bsram="2(2)"/>
+                <SubModule name="ram36" Lut="1" Bsram="1" T_Lut="1(1)" T_Bsram="1(1)"/>
+            </SubModule>
+            <SubModule name="B" Register="90" Alu="63" Lut="22" MULT18X18="2" T_Register="90(90)" T_Alu="63(63)" T_Lut="23(22)" T_MULT18X18="2(2)" T_Bsram="3(0)">
+                <SubModule name="fir2048" Bsram="2" T_Bsram="2(2)"/>
+                <SubModule name="ram36" Lut="1" Bsram="1" T_Lut="1(1)" T_Bsram="1(1)"/>
+            </SubModule>
+            <SubModule name="C" Register="90" Alu="63" Lut="22" MULT18X18="2" T_Register="90(90)" T_Alu="63(63)" T_Lut="23(22)" T_MULT18X18="2(2)" T_Bsram="3(0)">
+                <SubModule name="fir2048" Bsram="2" T_Bsram="2(2)"/>
+                <SubModule name="ram36" Lut="1" Bsram="1" T_Lut="1(1)" T_Bsram="1(1)"/>
+            </SubModule>
+            <SubModule name="D" Register="90" Alu="63" Lut="22" MULT18X18="2" T_Register="90(90)" T_Alu="63(63)" T_Lut="23(22)" T_MULT18X18="2(2)" T_Bsram="3(0)">
+                <SubModule name="fir2048" Bsram="2" T_Bsram="2(2)"/>
+                <SubModule name="ram36" Lut="1" Bsram="1" T_Lut="1(1)" T_Bsram="1(1)"/>
+            </SubModule>
+            <SubModule name="E" Register="90" Alu="63" Lut="22" MULT18X18="2" T_Register="90(90)" T_Alu="63(63)" T_Lut="23(22)" T_MULT18X18="2(2)" T_Bsram="3(0)">
+                <SubModule name="fir2048" Bsram="2" T_Bsram="2(2)"/>
+                <SubModule name="ram36" Lut="1" Bsram="1" T_Lut="1(1)" T_Bsram="1(1)"/>
+            </SubModule>
+            <SubModule name="F" Register="90" Alu="63" Lut="22" MULT18X18="2" T_Register="90(90)" T_Alu="63(63)" T_Lut="23(22)" T_MULT18X18="2(2)" T_Bsram="3(0)">
+                <SubModule name="fir2048" Bsram="2" T_Bsram="2(2)"/>
+                <SubModule name="ram36" Lut="1" Bsram="1" T_Lut="1(1)" T_Bsram="1(1)"/>
+            </SubModule>
+            <SubModule name="G" Register="90" Alu="63" Lut="22" MULT18X18="2" T_Register="90(90)" T_Alu="63(63)" T_Lut="23(22)" T_MULT18X18="2(2)" T_Bsram="3(0)">
+                <SubModule name="fir2048" Bsram="2" T_Bsram="2(2)"/>
+                <SubModule name="ram36" Lut="1" Bsram="1" T_Lut="1(1)" T_Bsram="1(1)"/>
+            </SubModule>
+            <SubModule name="H" Register="90" Alu="63" Lut="22" MULT18X18="2" T_Register="90(90)" T_Alu="63(63)" T_Lut="23(22)" T_MULT18X18="2(2)" T_Bsram="3(0)">
+                <SubModule name="fir2048" Bsram="2" T_Bsram="2(2)"/>
+                <SubModule name="ram36" Lut="1" Bsram="1" T_Lut="1(1)" T_Bsram="1(1)"/>
+            </SubModule>
+        </SubModule>
+    </SubModule>
+    <SubModule name="i2s" Register="56" Lut="63" T_Register="56(56)" T_Lut="63(63)"/>
 </Module>
